@@ -29,6 +29,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>SwiftyTimer.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>swiftScan.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -42,17 +47,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>3E46DAF050ABEAAE12DA490B015EE0B8</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>5C8D875EA6AA4410B964FD5D1AC1EFF6</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7CDD206BE5020B15DD54550860985171</key>
+		<key>86EE4DB41E57813F032FC523AF2E6686</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>93EC0E91E00064B8FD052A3297413C30</key>
+		<key>87AA4EB653A3EDADA2E90F7C6A2552CE</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -62,7 +72,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>FA4D0A2DF70FA252F4202C95E968964A</key>
+		<key>EA1D77A8B76AD8C6F08F15AB5E574AD0</key>
 		<dict>
 			<key>primary</key>
 			<true/>

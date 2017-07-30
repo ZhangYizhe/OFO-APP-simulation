@@ -152,7 +152,7 @@
                                                 </constraints>
                                                 <state key="normal" image="nextArrow_enable"/>
                                                 <connections>
-                                                    <segue destination="S7F-3s-acz" kind="modal" modalTransitionStyle="flipHorizontal" id="rzF-iq-vta"/>
+                                                    <segue destination="S7F-3s-acz" kind="presentation" modalTransitionStyle="flipHorizontal" id="rzF-iq-vta"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -800,10 +800,10 @@
             </objects>
             <point key="canvasLocation" x="936.79999999999995" y="1372.263868065967"/>
         </scene>
-        <!--Input View Controller-->
+        <!--Show Password Controller-->
         <scene sceneID="r8O-Kl-agj">
             <objects>
-                <viewController id="S7F-3s-acz" customClass="InputViewController" customModule="OFO_demo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="S7F-3s-acz" customClass="ShowPasswordController" customModule="OFO_demo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="3ld-2e-61r"/>
                         <viewControllerLayoutGuide type="bottom" id="mVl-Ka-dvc"/>
@@ -825,8 +825,8 @@
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="smartLock" translatesAutoresizingMaskIntoConstraints="NO" id="jld-vt-HRJ">
                                         <rect key="frame" x="10" y="0.0" width="307" height="135"/>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="骑行结束后记得在手机上结束行程" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jn0-7W-FL4">
-                                        <rect key="frame" x="71.5" y="244.5" width="184" height="14.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="骑行结束后记得在手机上结束行程" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jn0-7W-FL4">
+                                        <rect key="frame" x="72" y="244.5" width="184" height="14.5"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -843,23 +843,89 @@
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                         </userDefinedRuntimeAttributes>
                                     </label>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="q8M-Hy-GKf">
-                                        <rect key="frame" x="10" y="174.5" width="307" height="20.5"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="q8M-Hy-GKf">
+                                        <rect key="frame" x="20" y="174.5" width="287" height="50"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NZy-9K-fdT">
-                                                <rect key="frame" x="0.0" y="0.0" width="307" height="20.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NZy-9K-fdT" customClass="MyPreviewLabel" customModule="OFO_demo" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="57" height="50"/>
+                                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="40"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="boardwidth">
+                                                        <real key="value" value="2"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" red="1" green="0.88118737940000003" blue="0.2091418803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5dq-Kr-4bm" customClass="MyPreviewLabel" customModule="OFO_demo" customModuleProvider="target">
+                                                <rect key="frame" x="77" y="0.0" width="56.5" height="50"/>
+                                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="40"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="boardwidth">
+                                                        <real key="value" value="2"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" red="1" green="0.88118737940000003" blue="0.2091418803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0mm-qG-ikp" customClass="MyPreviewLabel" customModule="OFO_demo" customModuleProvider="target">
+                                                <rect key="frame" x="153.5" y="0.0" width="57" height="50"/>
+                                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="40"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="boardwidth">
+                                                        <real key="value" value="2"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" red="1" green="0.88118737940000003" blue="0.2091418803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CjN-t1-Iq2" customClass="MyPreviewLabel" customModule="OFO_demo" customModuleProvider="target">
+                                                <rect key="frame" x="230.5" y="0.0" width="56.5" height="50"/>
+                                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="40"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="boardwidth">
+                                                        <real key="value" value="2"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" red="1" green="0.88118737940000003" blue="0.2091418803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                             </label>
                                         </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="0sa-bK-hJk"/>
+                                        </constraints>
                                     </stackView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="q8M-Hy-GKf" firstAttribute="leading" secondItem="lmV-m6-qf6" secondAttribute="leading" constant="10" id="D0P-1g-UAd"/>
+                                    <constraint firstItem="q8M-Hy-GKf" firstAttribute="leading" secondItem="lmV-m6-qf6" secondAttribute="leading" constant="20" id="D0P-1g-UAd"/>
                                     <constraint firstItem="BNz-fF-D2A" firstAttribute="top" secondItem="jld-vt-HRJ" secondAttribute="bottom" id="J7W-GU-ulu"/>
-                                    <constraint firstAttribute="trailing" secondItem="q8M-Hy-GKf" secondAttribute="trailing" constant="10" id="OLc-DC-Jzd"/>
+                                    <constraint firstItem="jn0-7W-FL4" firstAttribute="top" secondItem="q8M-Hy-GKf" secondAttribute="bottom" constant="20" id="Mtt-wP-n7A"/>
+                                    <constraint firstAttribute="trailing" secondItem="q8M-Hy-GKf" secondAttribute="trailing" constant="20" id="OLc-DC-Jzd"/>
                                     <constraint firstAttribute="trailing" secondItem="jld-vt-HRJ" secondAttribute="trailing" constant="10" id="QDJ-IY-AMu"/>
                                     <constraint firstItem="jld-vt-HRJ" firstAttribute="leading" secondItem="lmV-m6-qf6" secondAttribute="leading" constant="10" id="VZb-iy-a6x"/>
                                     <constraint firstItem="BNz-fF-D2A" firstAttribute="centerX" secondItem="lmV-m6-qf6" secondAttribute="centerX" id="aJf-9k-xH1"/>
@@ -886,9 +952,6 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P02-7V-s2V">
                                         <rect key="frame" x="0.0" y="2.5" width="45" height="45"/>
                                         <state key="normal" image="btn_unenableTorch"/>
-                                        <connections>
-                                            <action selector="flashBtnTap:" destination="S7F-3s-acz" eventType="touchUpInside" id="AjN-iE-hl7"/>
-                                        </connections>
                                     </button>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M0y-Hr-O7Y">
                                         <rect key="frame" x="81.5" y="0.0" width="1" height="50"/>
@@ -900,14 +963,51 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BSs-Zx-CYY">
                                         <rect key="frame" x="119" y="2.5" width="45" height="45"/>
                                         <state key="normal" image="voiceopen"/>
-                                        <connections>
-                                            <action selector="voiceBtnTap:" destination="S7F-3s-acz" eventType="touchUpInside" id="Qi8-mx-GWm"/>
-                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="pzj-Vl-QXj"/>
                                 </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="CVI-8M-gfY">
+                                <rect key="frame" x="83" y="599" width="209" height="48"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QoJ-Z6-eVA">
+                                        <rect key="frame" x="0.0" y="0.0" width="209" height="18"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="120" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GDI-ry-7lg">
+                                                <rect key="frame" x="0.0" y="0.0" width="25" height="18"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="秒后开始计费，请检查车辆" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Twy-Im-wG4">
+                                                <rect key="frame" x="25" y="0.0" width="184" height="18"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="slJ-MJ-VZ4">
+                                        <rect key="frame" x="35.5" y="18" width="138.5" height="30"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="如有问题，" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PrY-Jg-NTU">
+                                                <rect key="frame" x="0.0" y="0.0" width="76.5" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qIb-DG-vfh">
+                                                <rect key="frame" x="76.5" y="0.0" width="62" height="30"/>
+                                                <state key="normal" title="立即报修"/>
+                                                <connections>
+                                                    <action selector="reportBtnTap:" destination="S7F-3s-acz" eventType="touchUpInside" id="l7E-YA-qLX"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
@@ -916,22 +1016,23 @@
                             <constraint firstItem="lmV-m6-qf6" firstAttribute="leading" secondItem="vQO-45-QJy" secondAttribute="leadingMargin" constant="8" id="Kci-dN-SSV"/>
                             <constraint firstItem="pnp-ed-Exf" firstAttribute="leading" secondItem="vQO-45-QJy" secondAttribute="leadingMargin" id="NiM-d0-XJS"/>
                             <constraint firstItem="CI2-Mc-NiQ" firstAttribute="top" secondItem="lmV-m6-qf6" secondAttribute="bottom" constant="8" id="QXK-MZ-bpl"/>
+                            <constraint firstItem="CVI-8M-gfY" firstAttribute="centerX" secondItem="vQO-45-QJy" secondAttribute="centerX" id="RJU-g0-ghN"/>
                             <constraint firstItem="CI2-Mc-NiQ" firstAttribute="width" secondItem="lmV-m6-qf6" secondAttribute="width" multiplier="0.5" id="SMo-dp-9tq"/>
                             <constraint firstItem="CI2-Mc-NiQ" firstAttribute="centerX" secondItem="vQO-45-QJy" secondAttribute="centerX" id="T9E-uX-6Ah"/>
                             <constraint firstAttribute="trailingMargin" secondItem="lmV-m6-qf6" secondAttribute="trailing" constant="8" id="Vvu-9e-BYC"/>
                             <constraint firstItem="pnp-ed-Exf" firstAttribute="top" secondItem="3ld-2e-61r" secondAttribute="bottom" id="r1I-2k-M1O"/>
                             <constraint firstAttribute="trailingMargin" secondItem="pnp-ed-Exf" secondAttribute="trailing" id="tQh-Mr-jad"/>
+                            <constraint firstItem="mVl-Ka-dvc" firstAttribute="top" secondItem="CVI-8M-gfY" secondAttribute="bottom" constant="20" id="wBB-vi-2aA"/>
                             <constraint firstItem="lmV-m6-qf6" firstAttribute="height" secondItem="vQO-45-QJy" secondAttribute="height" multiplier="0.4" id="yVT-FF-LSd"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="flashBtn" destination="P02-7V-s2V" id="rhA-Rv-1Fk"/>
-                        <outlet property="voiceBtn" destination="BSs-Zx-CYY" id="C1k-EO-612"/>
+                        <outlet property="countDownLabel" destination="GDI-ry-7lg" id="Jez-3a-h0d"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Fc-De-twD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2420" y="3"/>
+            <point key="canvasLocation" x="2420" y="2.2488755622188905"/>
         </scene>
     </scenes>
     <resources>

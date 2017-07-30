@@ -13,5 +13,6 @@ target 'OFO-demo' do
   pod 'FTIndicator'
   pod 'swiftScan'
   pod 'APNumberPad'
+  pod 'SwiftyTimer'
 
 end
