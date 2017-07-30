@@ -12,5 +12,6 @@ target 'OFO-demo' do
   pod 'AMapNavi'
   pod 'FTIndicator'
   pod 'swiftScan'
+  pod 'APNumberPad'
 
 end

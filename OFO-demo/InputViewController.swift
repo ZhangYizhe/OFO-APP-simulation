@@ -7,14 +7,16 @@
 //
 
 import UIKit
+import APNumberPad
 
-class InputViewController: UIViewController {
+class InputViewController: UIViewController,APNumberPadDelegate,UITextFieldDelegate {
     var isFlashOn = false
     var isVoiceOn = true
     
 
     @IBOutlet weak var inputTestField: UITextField!
     
+    @IBOutlet weak var goBtn: UIButton!
     
     
     @IBOutlet weak var flashBtn: UIButton!
@@ -58,8 +60,41 @@ class InputViewController: UIViewController {
         navigationController?.navigationBar.barTintColor = UIColor.ofo
         navigationController?.navigationBar.tintColor = UIColor.white
         navigationController?.navigationBar.barStyle = .black
+        
+        
+         let numberPad = APNumberPad(delegate: self)
+        numberPad.leftFunctionButton.setTitle("确定", for: .normal)
+        inputTestField.inputView = numberPad
+        inputTestField.delegate = self
+        
 
         // Do any additional setup after loading the view.
+        
+    }
+    
+    //numerpad左侧按钮
+    
+    func numberPad(_ numberPad: APNumberPad, functionButtonAction functionButton: UIButton, textInput: UIResponder) {
+        print("你点了我")
+    }
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        
+        guard let text = textField.text else {
+            return true
+        }
+        
+        let newLength = text.characters.count + string.characters.count - range.length
+        
+        if newLength > 0 {
+            goBtn.setImage(#imageLiteral(resourceName: "nextArrow_enable"), for: .normal)
+            goBtn.backgroundColor = UIColor.ofo
+        } else {
+            goBtn.setImage(#imageLiteral(resourceName: "nextArrow_unenable"), for: .normal)
+            goBtn.backgroundColor = UIColor.groupTableViewBackground
+        }
+        
+        return newLength <= 8
         
     }
     

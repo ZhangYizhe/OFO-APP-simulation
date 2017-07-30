@@ -21,6 +21,7 @@
 		62A570651F28C65C0061296C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62A570631F28C65C0061296C /* Main.storyboard */; };
 		62A570671F28C65C0061296C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 62A570661F28C65C0061296C /* Assets.xcassets */; };
 		62A5706A1F28C65C0061296C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62A570681F28C65C0061296C /* LaunchScreen.storyboard */; };
+		62EAF6611F2DA11D00A9B439 /* UIViewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62EAF6601F2DA11D00A9B439 /* UIViewHelper.swift */; };
 		860C14F06EF4263BDB2115CB /* Pods_OFO_demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7FC7CBF833F57C577C36870 /* Pods_OFO_demo.framework */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +44,7 @@
 		62A570661F28C65C0061296C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		62A570691F28C65C0061296C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		62A5706B1F28C65C0061296C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		62EAF6601F2DA11D00A9B439 /* UIViewHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewHelper.swift; sourceTree = "<group>"; };
 		93BE31E28C5531A5AA5354BC /* Pods-OFO-demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OFO-demo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OFO-demo/Pods-OFO-demo.debug.xcconfig"; sourceTree = "<group>"; };
 		C7FC7CBF833F57C577C36870 /* Pods_OFO_demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OFO_demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -106,6 +108,7 @@
 				620115271F29F3390092CFEC /* MyPinAnnotation.swift */,
 				6201151E1F28D1E00092CFEC /* WebViewViewController.swift */,
 				620115201F28DB910092CFEC /* MenuTableViewController.swift */,
+				62EAF6601F2DA11D00A9B439 /* UIViewHelper.swift */,
 				620115251F28E44C0092CFEC /* AboutUsViewController.swift */,
 				626CC4241F2AB2D5004FBD14 /* ScanViewController.swift */,
 				62A570631F28C65C0061296C /* Main.storyboard */,
@@ -249,6 +252,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				62EAF6611F2DA11D00A9B439 /* UIViewHelper.swift in Sources */,
 				620115281F29F3390092CFEC /* MyPinAnnotation.swift in Sources */,
 				626CC4251F2AB2D5004FBD14 /* ScanViewController.swift in Sources */,
 				620115261F28E44C0092CFEC /* AboutUsViewController.swift in Sources */,
