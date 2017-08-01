@@ -10,7 +10,10 @@ import UIKit
 import SwiftyTimer
 import SwiftySound
 
-class ShowPasswordController: UIViewController {
+import MediaPlayer
+import AVFoundation
+
+class ShowPasswordController: UIViewController,AVAudioPlayerDelegate {
     
     
     @IBOutlet weak var label1st: MyPreviewLabel!
@@ -21,7 +24,7 @@ class ShowPasswordController: UIViewController {
     
     
     @IBAction func overtravelBtnTap(_ sender: UIBarButtonItem) {
-        
+        Sound.play(file: "骑行结束_LH.m4a")
       dismiss(animated: true, completion: nil)
     }
     
@@ -87,8 +90,19 @@ class ShowPasswordController: UIViewController {
         
     }
     
+    
+    //播放车牌号命令初始化
+    var audioPlay: AVAudioPlayer?
+    var playlist = [String](repeating: "", count: 5)
+    
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+
+        
+
         
         codeflagLabel.text = "车牌号\(code)的解锁码"
 
@@ -106,7 +120,7 @@ class ShowPasswordController: UIViewController {
         
         if defaults.bool(forKey: "isVoiceOn")
         {
-            Sound.play(file: "骑行结束_LH.m4a")
+            //Sound.play(file: "骑行结束_LH.m4a")
             voiceBtn.setImage(#imageLiteral(resourceName: "voiceopen"), for: .normal)
         }else{
             voiceBtn.setImage(#imageLiteral(resourceName: "voiceclose"), for: .normal)
@@ -118,9 +132,86 @@ class ShowPasswordController: UIViewController {
         self.label2nd.text = passArray[1]
         self.label3rd.text = passArray[2]
         self.label4th.text = passArray[3]
+        
+
+        
+
+        
+        playlist[0] = Bundle.main.path(forResource: "您的解锁码为_D", ofType: "m4a")!
+        
+        for flag in 1...4 {
+            playlist[flag] = Bundle.main.path(forResource: "\(passArray[flag-1])_D", ofType: "m4a")!
+            
+        }
+        
+        
+        
+        CodeReadaloud()
+        
+
 
         
     }
+    
+
+
+    var test = true
+    var pathURL = NSURL()
+    
+    func CodeReadaloud(){
+        
+        
+        if playwhichone == 0 {
+                    pathURL  = NSURL(fileURLWithPath: playlist[0])
+        }
+
+
+        
+
+        
+        do {
+            audioPlay = try AVAudioPlayer(contentsOf: pathURL as URL)
+        } catch {
+            audioPlay = nil
+        }
+        
+        
+        audioPlay?.prepareToPlay()
+        
+        
+        audioPlay?.play()
+        
+        audioPlay?.delegate = self
+ 
+        
+        
+        
+        
+        
+    }
+    
+    var playwhichone = 0
+    
+    func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
+        
+        if playwhichone < 4 {
+            
+            playwhichone = playwhichone + 1
+            
+            pathURL = NSURL(fileURLWithPath: playlist[playwhichone])
+            CodeReadaloud()
+            
+        }else{
+            audioPlay?.stop()
+        }
+
+        
+
+        
+    }
+    
+    
+    
 
     @IBAction func reportBtnTap(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
