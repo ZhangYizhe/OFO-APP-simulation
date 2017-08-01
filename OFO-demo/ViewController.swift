@@ -82,6 +82,10 @@ class ViewController: UIViewController,MAMapViewDelegate,AMapSearchDelegate,AMap
             view.addGestureRecognizer(revealVC.panGestureRecognizer())
         }
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

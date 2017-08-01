@@ -11,4 +11,7 @@
 #import <AMapSearchKit/AMapSearchKit.h>
 #import <AMapNaviKit/AMapNaviKit.h>
 
+//learnCloud安装
+#import <AVOSCloud/AVOSCloud.h>
+
 

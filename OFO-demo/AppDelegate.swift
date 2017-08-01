@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVOSCloud
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -19,6 +20,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         AMapServices.shared().enableHTTPS = true
         AMapServices.shared().apiKey = "0fc5d996cdea1b9c2f0b1b0134b79ede"
+        
+        
+        // 使用美国站点需要增加以下代码：
+        // [AVOSCloud setServiceRegion:AVServiceRegionUS];
+        
+        AVOSCloud.setApplicationId("lyC3M2tlILwCHbipP0hKQ0FH-gzGzoHsz", clientKey: "5ReawurprywdAYyxSFt4GzTi")
+
         
         return true
     }

@@ -12,6 +12,8 @@
 		620115261F28E44C0092CFEC /* AboutUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620115251F28E44C0092CFEC /* AboutUsViewController.swift */; };
 		620115281F29F3390092CFEC /* MyPinAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620115271F29F3390092CFEC /* MyPinAnnotation.swift */; };
 		6201152A1F29F9140092CFEC /* test.png in Resources */ = {isa = PBXBuildFile; fileRef = 620115291F29F9140092CFEC /* test.png */; };
+		6253E41C1F300F7500ACB899 /* NetWork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6253E41B1F300F7500ACB899 /* NetWork.swift */; };
+		6253E41E1F3029D900ACB899 /* ErrorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6253E41D1F3029D900ACB899 /* ErrorViewController.swift */; };
 		626CC4251F2AB2D5004FBD14 /* ScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626CC4241F2AB2D5004FBD14 /* ScanViewController.swift */; };
 		626CC4271F2ABCD0004FBD14 /* CodeScan.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 626CC4261F2ABCD0004FBD14 /* CodeScan.bundle */; };
 		626CC4291F2ACAAC004FBD14 /* InputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626CC4281F2ACAAC004FBD14 /* InputViewController.swift */; };
@@ -23,6 +25,21 @@
 		62A5706A1F28C65C0061296C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62A570681F28C65C0061296C /* LaunchScreen.storyboard */; };
 		62EAF6611F2DA11D00A9B439 /* UIViewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62EAF6601F2DA11D00A9B439 /* UIViewHelper.swift */; };
 		62EAF6631F2DE69C00A9B439 /* ShowPasswordController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62EAF6621F2DE69C00A9B439 /* ShowPasswordController.swift */; };
+		62EAF6741F2EB53F00A9B439 /* 0_D.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 62EAF6651F2EB53F00A9B439 /* 0_D.m4a */; };
+		62EAF6751F2EB53F00A9B439 /* 1_D.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 62EAF6661F2EB53F00A9B439 /* 1_D.m4a */; };
+		62EAF6761F2EB53F00A9B439 /* 2_D.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 62EAF6671F2EB53F00A9B439 /* 2_D.m4a */; };
+		62EAF6771F2EB53F00A9B439 /* 3_D.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 62EAF6681F2EB53F00A9B439 /* 3_D.m4a */; };
+		62EAF6781F2EB53F00A9B439 /* 4_D.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 62EAF6691F2EB53F00A9B439 /* 4_D.m4a */; };
+		62EAF6791F2EB53F00A9B439 /* 5_D.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 62EAF66A1F2EB53F00A9B439 /* 5_D.m4a */; };
+		62EAF67A1F2EB53F00A9B439 /* 6_D.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 62EAF66B1F2EB53F00A9B439 /* 6_D.m4a */; };
+		62EAF67B1F2EB53F00A9B439 /* 7_D.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 62EAF66C1F2EB53F00A9B439 /* 7_D.m4a */; };
+		62EAF67C1F2EB53F00A9B439 /* 8_D.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 62EAF66D1F2EB53F00A9B439 /* 8_D.m4a */; };
+		62EAF67D1F2EB53F00A9B439 /* 9_D.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 62EAF66E1F2EB53F00A9B439 /* 9_D.m4a */; };
+		62EAF67E1F2EB53F00A9B439 /* 上车前_D.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 62EAF66F1F2EB53F00A9B439 /* 上车前_D.m4a */; };
+		62EAF67F1F2EB53F00A9B439 /* 上车前_LH.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 62EAF6701F2EB53F00A9B439 /* 上车前_LH.m4a */; };
+		62EAF6801F2EB53F00A9B439 /* 您的解锁码为_D.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 62EAF6711F2EB53F00A9B439 /* 您的解锁码为_D.m4a */; };
+		62EAF6811F2EB53F00A9B439 /* 骑行结束_D.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 62EAF6721F2EB53F00A9B439 /* 骑行结束_D.m4a */; };
+		62EAF6821F2EB53F00A9B439 /* 骑行结束_LH.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 62EAF6731F2EB53F00A9B439 /* 骑行结束_LH.m4a */; };
 		860C14F06EF4263BDB2115CB /* Pods_OFO_demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7FC7CBF833F57C577C36870 /* Pods_OFO_demo.framework */; };
 /* End PBXBuildFile section */
 
@@ -34,6 +51,8 @@
 		620115251F28E44C0092CFEC /* AboutUsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutUsViewController.swift; sourceTree = "<group>"; };
 		620115271F29F3390092CFEC /* MyPinAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPinAnnotation.swift; sourceTree = "<group>"; };
 		620115291F29F9140092CFEC /* test.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test.png; sourceTree = "<group>"; };
+		6253E41B1F300F7500ACB899 /* NetWork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetWork.swift; sourceTree = "<group>"; };
+		6253E41D1F3029D900ACB899 /* ErrorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorViewController.swift; sourceTree = "<group>"; };
 		626CC4241F2AB2D5004FBD14 /* ScanViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanViewController.swift; sourceTree = "<group>"; };
 		626CC4261F2ABCD0004FBD14 /* CodeScan.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = CodeScan.bundle; sourceTree = "<group>"; };
 		626CC4281F2ACAAC004FBD14 /* InputViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +66,21 @@
 		62A5706B1F28C65C0061296C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		62EAF6601F2DA11D00A9B439 /* UIViewHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewHelper.swift; sourceTree = "<group>"; };
 		62EAF6621F2DE69C00A9B439 /* ShowPasswordController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowPasswordController.swift; sourceTree = "<group>"; };
+		62EAF6651F2EB53F00A9B439 /* 0_D.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = 0_D.m4a; sourceTree = "<group>"; };
+		62EAF6661F2EB53F00A9B439 /* 1_D.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = 1_D.m4a; sourceTree = "<group>"; };
+		62EAF6671F2EB53F00A9B439 /* 2_D.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = 2_D.m4a; sourceTree = "<group>"; };
+		62EAF6681F2EB53F00A9B439 /* 3_D.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = 3_D.m4a; sourceTree = "<group>"; };
+		62EAF6691F2EB53F00A9B439 /* 4_D.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = 4_D.m4a; sourceTree = "<group>"; };
+		62EAF66A1F2EB53F00A9B439 /* 5_D.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = 5_D.m4a; sourceTree = "<group>"; };
+		62EAF66B1F2EB53F00A9B439 /* 6_D.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = 6_D.m4a; sourceTree = "<group>"; };
+		62EAF66C1F2EB53F00A9B439 /* 7_D.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = 7_D.m4a; sourceTree = "<group>"; };
+		62EAF66D1F2EB53F00A9B439 /* 8_D.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = 8_D.m4a; sourceTree = "<group>"; };
+		62EAF66E1F2EB53F00A9B439 /* 9_D.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = 9_D.m4a; sourceTree = "<group>"; };
+		62EAF66F1F2EB53F00A9B439 /* 上车前_D.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "上车前_D.m4a"; sourceTree = "<group>"; };
+		62EAF6701F2EB53F00A9B439 /* 上车前_LH.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "上车前_LH.m4a"; sourceTree = "<group>"; };
+		62EAF6711F2EB53F00A9B439 /* 您的解锁码为_D.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "您的解锁码为_D.m4a"; sourceTree = "<group>"; };
+		62EAF6721F2EB53F00A9B439 /* 骑行结束_D.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "骑行结束_D.m4a"; sourceTree = "<group>"; };
+		62EAF6731F2EB53F00A9B439 /* 骑行结束_LH.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "骑行结束_LH.m4a"; sourceTree = "<group>"; };
 		93BE31E28C5531A5AA5354BC /* Pods-OFO-demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OFO-demo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OFO-demo/Pods-OFO-demo.debug.xcconfig"; sourceTree = "<group>"; };
 		C7FC7CBF833F57C577C36870 /* Pods_OFO_demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OFO_demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -101,6 +135,7 @@
 		62A5705E1F28C65C0061296C /* OFO-demo */ = {
 			isa = PBXGroup;
 			children = (
+				62EAF6641F2EB53F00A9B439 /* voice */,
 				626CC4261F2ABCD0004FBD14 /* CodeScan.bundle */,
 				620115291F29F9140092CFEC /* test.png */,
 				62A5705F1F28C65C0061296C /* AppDelegate.swift */,
@@ -108,6 +143,8 @@
 				626CC42A1F2ACC00004FBD14 /* ColerHelper.swift */,
 				62A570611F28C65C0061296C /* ViewController.swift */,
 				620115271F29F3390092CFEC /* MyPinAnnotation.swift */,
+				6253E41B1F300F7500ACB899 /* NetWork.swift */,
+				6253E41D1F3029D900ACB899 /* ErrorViewController.swift */,
 				6201151E1F28D1E00092CFEC /* WebViewViewController.swift */,
 				620115201F28DB910092CFEC /* MenuTableViewController.swift */,
 				62EAF6601F2DA11D00A9B439 /* UIViewHelper.swift */,
@@ -121,6 +158,29 @@
 				620115221F28DF1E0092CFEC /* OFO-demo-Bridging-Header.h */,
 			);
 			path = "OFO-demo";
+			sourceTree = "<group>";
+		};
+		62EAF6641F2EB53F00A9B439 /* voice */ = {
+			isa = PBXGroup;
+			children = (
+				62EAF6651F2EB53F00A9B439 /* 0_D.m4a */,
+				62EAF6661F2EB53F00A9B439 /* 1_D.m4a */,
+				62EAF6671F2EB53F00A9B439 /* 2_D.m4a */,
+				62EAF6681F2EB53F00A9B439 /* 3_D.m4a */,
+				62EAF6691F2EB53F00A9B439 /* 4_D.m4a */,
+				62EAF66A1F2EB53F00A9B439 /* 5_D.m4a */,
+				62EAF66B1F2EB53F00A9B439 /* 6_D.m4a */,
+				62EAF66C1F2EB53F00A9B439 /* 7_D.m4a */,
+				62EAF66D1F2EB53F00A9B439 /* 8_D.m4a */,
+				62EAF66E1F2EB53F00A9B439 /* 9_D.m4a */,
+				62EAF66F1F2EB53F00A9B439 /* 上车前_D.m4a */,
+				62EAF6701F2EB53F00A9B439 /* 上车前_LH.m4a */,
+				62EAF6711F2EB53F00A9B439 /* 您的解锁码为_D.m4a */,
+				62EAF6721F2EB53F00A9B439 /* 骑行结束_D.m4a */,
+				62EAF6731F2EB53F00A9B439 /* 骑行结束_LH.m4a */,
+			);
+			name = voice;
+			path = ../voice;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -192,9 +252,24 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				62EAF67A1F2EB53F00A9B439 /* 6_D.m4a in Resources */,
+				62EAF6771F2EB53F00A9B439 /* 3_D.m4a in Resources */,
+				62EAF6791F2EB53F00A9B439 /* 5_D.m4a in Resources */,
+				62EAF67B1F2EB53F00A9B439 /* 7_D.m4a in Resources */,
+				62EAF6801F2EB53F00A9B439 /* 您的解锁码为_D.m4a in Resources */,
+				62EAF67F1F2EB53F00A9B439 /* 上车前_LH.m4a in Resources */,
+				62EAF67C1F2EB53F00A9B439 /* 8_D.m4a in Resources */,
+				62EAF6741F2EB53F00A9B439 /* 0_D.m4a in Resources */,
 				626CC4271F2ABCD0004FBD14 /* CodeScan.bundle in Resources */,
 				62A5706A1F28C65C0061296C /* LaunchScreen.storyboard in Resources */,
+				62EAF6781F2EB53F00A9B439 /* 4_D.m4a in Resources */,
+				62EAF67E1F2EB53F00A9B439 /* 上车前_D.m4a in Resources */,
+				62EAF67D1F2EB53F00A9B439 /* 9_D.m4a in Resources */,
 				62A570671F28C65C0061296C /* Assets.xcassets in Resources */,
+				62EAF6761F2EB53F00A9B439 /* 2_D.m4a in Resources */,
+				62EAF6751F2EB53F00A9B439 /* 1_D.m4a in Resources */,
+				62EAF6811F2EB53F00A9B439 /* 骑行结束_D.m4a in Resources */,
+				62EAF6821F2EB53F00A9B439 /* 骑行结束_LH.m4a in Resources */,
 				62A570651F28C65C0061296C /* Main.storyboard in Resources */,
 				6201152A1F29F9140092CFEC /* test.png in Resources */,
 			);
@@ -257,6 +332,8 @@
 			files = (
 				62EAF6611F2DA11D00A9B439 /* UIViewHelper.swift in Sources */,
 				620115281F29F3390092CFEC /* MyPinAnnotation.swift in Sources */,
+				6253E41E1F3029D900ACB899 /* ErrorViewController.swift in Sources */,
+				6253E41C1F300F7500ACB899 /* NetWork.swift in Sources */,
 				626CC4251F2AB2D5004FBD14 /* ScanViewController.swift in Sources */,
 				620115261F28E44C0092CFEC /* AboutUsViewController.swift in Sources */,
 				626CC4291F2ACAAC004FBD14 /* InputViewController.swift in Sources */,

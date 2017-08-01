@@ -47,3 +47,42 @@ extension UIView{
 @IBDesignable class MyPreviewLabel: UILabel {//方法可视化
     
 }
+
+@IBDesignable class MyPreviewButton: UIButton {//方法可视化
+    
+}
+
+//开启手电筒
+
+import AVFoundation
+
+func turnTorch() {
+    
+    guard let device = AVCaptureDevice.defaultDevice(withMediaType: AVMediaTypeVideo) else { return }
+    
+    if device.hasTorch && device.isTorchAvailable {
+        try? device.lockForConfiguration()
+        
+        if device.torchMode == .off {
+            device.torchMode = .on
+        } else {
+            device.torchMode = .off
+        }
+        
+        device.unlockForConfiguration()
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

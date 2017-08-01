@@ -14,7 +14,17 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>AVOSCloud.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>FTIndicator.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>MIBlurPopup.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -25,6 +35,11 @@
 			<false/>
 		</dict>
 		<key>SWRevealViewController.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>SwiftySound.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -47,7 +62,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>3E46DAF050ABEAAE12DA490B015EE0B8</key>
+		<key>339BB25366AECED203A2FCD332CE6DE2</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>4326838CBB986D882B4212A659991784</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -57,22 +77,32 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>86EE4DB41E57813F032FC523AF2E6686</key>
+		<key>61F87FEF7E5AEF6C2CA9309E05592DD1</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>87AA4EB653A3EDADA2E90F7C6A2552CE</key>
+		<key>69F59636E016BD704D9FAFDDACAFE4EA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6DC3291F8498059D396EE536EA25AAE7</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>7718A60E691A7016574F746843DB772D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>7FE87B8E50C6FD7CB158707A3631AE6C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>A84DA1D502917E8956383E16DCBDC7CD</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>EA1D77A8B76AD8C6F08F15AB5E574AD0</key>
 		<dict>
 			<key>primary</key>
 			<true/>

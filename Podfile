@@ -14,5 +14,8 @@ target 'OFO-demo' do
   pod 'swiftScan'
   pod 'APNumberPad'
   pod 'SwiftyTimer'
+  pod 'SwiftySound'
+  pod 'AVOSCloud'
+  pod 'MIBlurPopup'
 
 end

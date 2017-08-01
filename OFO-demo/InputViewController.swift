@@ -8,15 +8,26 @@
 
 import UIKit
 import APNumberPad
+import FTIndicator
 
 class InputViewController: UIViewController,APNumberPadDelegate,UITextFieldDelegate {
     var isFlashOn = false
     var isVoiceOn = true
+    let defaults = UserDefaults.standard
     
+    
+
+    @IBAction func goBtnTap(_ sender: UIButton) {
+        checkPass()
+    }
+        
+        
+        
 
     @IBOutlet weak var inputTestField: UITextField!
     
     @IBOutlet weak var goBtn: UIButton!
+
     
     
     @IBOutlet weak var flashBtn: UIButton!
@@ -38,9 +49,12 @@ class InputViewController: UIViewController,APNumberPadDelegate,UITextFieldDeleg
         
         if isVoiceOn {
             voiceBtn.setImage(#imageLiteral(resourceName: "voiceopen"), for: .normal)
+            defaults.set(true, forKey: "isVoiceOn")
         } else {
             voiceBtn.setImage(#imageLiteral(resourceName: "voiceclose"), for: .normal)
+            defaults.set(false, forKey: "isVoiceOn")
         }
+    
 
         
     }
@@ -68,6 +82,17 @@ class InputViewController: UIViewController,APNumberPadDelegate,UITextFieldDeleg
         inputTestField.delegate = self
         
 
+            goBtn.isEnabled = false
+        
+        if defaults.bool(forKey: "isVoiceOn")
+        {
+            voiceBtn.setImage(#imageLiteral(resourceName: "voiceopen"), for: .normal)
+        }else{
+            voiceBtn.setImage(#imageLiteral(resourceName: "voiceclose"), for: .normal)
+            isVoiceOn = false
+        }
+        
+
         // Do any additional setup after loading the view.
         
     }
@@ -75,7 +100,12 @@ class InputViewController: UIViewController,APNumberPadDelegate,UITextFieldDeleg
     //numerpad左侧按钮
     
     func numberPad(_ numberPad: APNumberPad, functionButtonAction functionButton: UIButton, textInput: UIResponder) {
-        print("你点了我")
+        
+
+        checkPass()
+        
+
+        
     }
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
@@ -89,9 +119,14 @@ class InputViewController: UIViewController,APNumberPadDelegate,UITextFieldDeleg
         if newLength > 0 {
             goBtn.setImage(#imageLiteral(resourceName: "nextArrow_enable"), for: .normal)
             goBtn.backgroundColor = UIColor.ofo
+            
+            goBtn.isEnabled = true
+            
         } else {
             goBtn.setImage(#imageLiteral(resourceName: "nextArrow_unenable"), for: .normal)
             goBtn.backgroundColor = UIColor.groupTableViewBackground
+            
+            goBtn.isEnabled = false
         }
         
         return newLength <= 8
@@ -107,6 +142,43 @@ class InputViewController: UIViewController,APNumberPadDelegate,UITextFieldDeleg
         // Dispose of any resources that can be recreated.
     }
     
+    
+    
+    
+    var passArray : [String] = [] //密码分割
+    
+    func checkPass() {
+        
+        if !inputTestField.text!.isEmpty{
+            
+           let code = inputTestField.text!
+            
+            Network.getpass(code: code, completion: { (pass) in
+                
+                
+                
+                if let pass = pass{
+                    //"9999"转换成["9","9","9","9"]
+                    self.passArray = pass.characters.map{
+                        return $0.description
+                    }
+                    
+                    self.performSegue(withIdentifier: "showPasscode", sender: self)
+                    
+                }else {
+                    self.performSegue(withIdentifier: "showErrorView", sender: self)
+                }
+            })
+            
+            
+
+            
+        }
+        
+        
+        
+        
+    }
 
     
     // MARK: - Navigation
@@ -115,6 +187,19 @@ class InputViewController: UIViewController,APNumberPadDelegate,UITextFieldDeleg
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        
+        if segue.identifier == "showPasscode" {//确认是有指定identifier触发
+            
+        
+            let dest = segue.destination as! ShowPasswordController //获取目标转场控制器并转换成具体的类
+            let code = inputTestField.text!//设置目标控制器属性
+            dest.code = code
+            dest.passArray = self.passArray
+        
+            
+            
+        }
+        
     }
     
 
